@@ -1,0 +1,197 @@
+body{
+margin:0;
+font-family:Segoe UI;
+background:linear-gradient(140deg,#020617,#0f172a);
+color:white;
+}
+
+.dashboard{
+display:flex;
+height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:220px;
+background:#020617;
+padding:25px;
+box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+.sidebar h2{
+color:#38bdf8;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+margin-top:20px;
+}
+
+.sidebar li{
+padding:12px;
+margin-bottom:10px;
+background:#1e293b;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.sidebar li:hover{
+background:#2563eb;
+transform:translateX(5px);
+}
+
+/* Main */
+
+.main{
+flex:1;
+padding:35px;
+}
+
+.task-input{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+input,select{
+padding:10px;
+border:none;
+border-radius:6px;
+background:#1e293b;
+color:white;
+}
+
+button{
+padding:10px 14px;
+border:none;
+background:linear-gradient(90deg,#3b82f6,#2563eb);
+color:white;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.pdf-btn{
+background:linear-gradient(90deg,#9333ea,#7c3aed);
+}
+
+/* Task Cards */
+
+.task-card{
+background:#1e293b;
+padding:16px;
+border-radius:10px;
+margin-bottom:12px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 6px 20px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.task-card:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Priority */
+
+.priority-high{
+color:#ef4444;
+font-weight:bold;
+}
+
+.priority-medium{
+color:#f59e0b;
+font-weight:bold;
+}
+
+.priority-low{
+color:#22c55e;
+font-weight:bold;
+}
+
+/* Stats */
+
+.stats{
+width:260px;
+background:#020617;
+padding:25px;
+}
+
+.stat-card{
+padding:18px;
+border-radius:10px;
+margin-bottom:15px;
+text-align:center;
+}
+
+.blue{
+background:linear-gradient(90deg,#2563eb,#3b82f6);
+}
+
+.green{
+background:linear-gradient(90deg,#22c55e,#4ade80);
+}
+
+.orange{
+background:linear-gradient(90deg,#f97316,#fb923c);
+}
+
+/* Progress Bar */
+
+.task-progress{
+margin-top:30px;
+}
+
+.progress-bar-container{
+background:#1e293b;
+height:18px;
+border-radius:12px;
+margin-top:8px;
+}
+
+#progressBar{
+background:linear-gradient(90deg,#22c55e,#4ade80);
+height:100%;
+width:0%;
+border-radius:12px;
+transition:0.4s;
+}
+
+/* Circle Chart */
+
+.circle{
+margin:30px auto;
+width:140px;
+height:140px;
+border-radius:50%;
+background:
+conic-gradient(#22c55e 0deg, #22c55e var(--angle), #1e293b var(--angle));
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.circle-inner{
+width:100px;
+height:100px;
+background:#020617;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+font-weight:bold;
+}
+
+.progress-text{
+text-align:center;
+}

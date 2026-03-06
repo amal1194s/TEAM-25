@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Advanced ToDo Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2>✔ ToDo App</h2>
+
+<ul>
+<li onclick="setFilter('all')">Dashboard</li>
+<li onclick="setFilter('all')">All Tasks</li>
+<li onclick="setFilter('completed')">Completed</li>
+<li onclick="setFilter('pending')">Pending</li>
+</ul>
+
+</div>
+
+
+<!-- Main -->
+
+<div class="main">
+
+<h1>My Tasks</h1>
+
+<div class="task-input">
+
+<input id="taskInput" placeholder="Add a new task">
+
+<select id="priority">
+<option value="Low">Low</option>
+<option value="Medium">Medium</option>
+<option value="High">High</option>
+</select>
+
+<button onclick="addTask()">Add Task</button>
+
+<button onclick="downloadPDF()" class="pdf-btn">Download Report</button>
+
+</div>
+
+<h3>Today's Tasks</h3>
+
+<div id="taskList"></div>
+
+
+<div class="task-progress">
+
+<p>Completed: <span id="completedLabel">0</span></p>
+
+<div class="progress-bar-container">
+
+<div id="progressBar"></div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Stats Panel -->
+
+<div class="stats">
+
+<h3>Task Stats</h3>
+
+<div class="stat-card blue">
+<p>Total</p>
+<h2 id="total">0</h2>
+</div>
+
+<div class="stat-card green">
+<p>Completed</p>
+<h2 id="completed">0</h2>
+</div>
+
+<div class="stat-card orange">
+<p>Pending</p>
+<h2 id="pending">0</h2>
+</div>
+
+
+<div class="circle">
+
+<div class="circle-inner">
+
+<span id="percent">0%</span>
+
+</div>
+
+</div>
+
+<p class="progress-text">Progress</p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
